@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="190.0" prefWidth="366.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controllers.adds.addTask">
+  <children>
+    <Label layoutX="106.0" layoutY="14.0" text="Добавление задания">
+      <font>
+        <Font name="System Bold" size="15.0" />
+      </font>
+    </Label>
+    <Label layoutX="67.0" layoutY="46.0" prefWidth="61.0" text="Предмет">
+      <font>
+        <Font size="14.0" />
+      </font>
+    </Label>
+    <ChoiceBox fx:id="subjects" layoutX="146.0" layoutY="45.0" prefWidth="138.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <TextField fx:id="deadline" layoutX="67.0" layoutY="84.0" prefWidth="217.0" promptText="Дедлайн" />
+    <TextField fx:id="type_control" layoutX="67.0" layoutY="121.0" prefWidth="217.0" promptText="Тип контроля" />
+    <Button layoutX="302.0" layoutY="155.0" mnemonicParsing="false" onMouseClicked="#confirm" text="ОК" />
+  </children>
+</AnchorPane>

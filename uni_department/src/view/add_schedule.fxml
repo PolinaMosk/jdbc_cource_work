@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="246.0" prefWidth="347.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controllers.adds.addSchedule">
+  <children>
+    <Label layoutX="19.0" layoutY="28.0" text="День недели" />
+    <ChoiceBox fx:id="weekdays" layoutX="174.0" layoutY="26.0" prefWidth="95.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Label layoutX="19.0" layoutY="56.0" prefHeight="21.0" prefWidth="95.0" text="Пеподаватель" />
+    <Label layoutX="19.0" layoutY="83.0" prefHeight="21.0" prefWidth="95.0" text="Группа" />
+    <Label layoutX="19.0" layoutY="113.0" prefHeight="21.0" prefWidth="95.0" text="Предмет" />
+    <Label layoutX="19.0" layoutY="144.0" prefHeight="21.0" prefWidth="95.0" text="Время" />
+    <Label layoutX="19.0" layoutY="174.0" prefHeight="21.0" prefWidth="95.0" text="Аудитория" />
+    <ChoiceBox fx:id="teachers" layoutX="174.0" layoutY="56.0" prefWidth="95.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <ChoiceBox fx:id="groups" layoutX="174.0" layoutY="83.0" prefWidth="95.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <ChoiceBox fx:id="subjects" layoutX="174.0" layoutY="112.0" prefWidth="95.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <TextField fx:id="time" layoutX="131.0" layoutY="144.0" prefWidth="138.0" />
+    <TextField fx:id="cabinet" layoutX="131.0" layoutY="173.0" prefWidth="138.0" />
+    <Button layoutX="269.0" layoutY="212.0" mnemonicParsing="false" onMouseClicked="#confirm" text="ОК" />
+  </children>
+</AnchorPane>

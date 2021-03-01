@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="310.0" prefWidth="459.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controllers.AskFormController">
+  <children>
+    <Label layoutX="27.0" layoutY="27.0" prefHeight="29.0" prefWidth="112.0" text="Преподаватель" />
+    <ChoiceBox fx:id="teacher_input" layoutX="27.0" layoutY="56.0" prefHeight="29.0" prefWidth="124.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Label layoutX="27.0" layoutY="92.0" prefHeight="29.0" prefWidth="112.0" text="Предмет*" />
+    <ChoiceBox fx:id="subject_input" layoutX="27.0" layoutY="121.0" prefHeight="29.0" prefWidth="124.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <TextArea fx:id="question_input" layoutX="14.0" layoutY="169.0" prefHeight="90.0" prefWidth="431.0" promptText="Вопрос" wrapText="true" />
+    <Button fx:id="send_question" layoutX="346.0" layoutY="268.0" mnemonicParsing="false" onMouseClicked="#confirm_q" prefHeight="29.0" prefWidth="92.0" text="Отправить" />
+    <Button fx:id="cancel" layoutX="14.0" layoutY="268.0" mnemonicParsing="false" onMouseClicked="#cancel" prefHeight="28.0" prefWidth="92.0" text="Отменить" />
+  </children>
+</AnchorPane>

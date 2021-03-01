@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controllers.MainWindowAdminController">
+  <children>
+    <TabPane layoutX="0.0" layoutY="0.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="Добавление">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Button id="open_add_student" layoutX="14.0" layoutY="77.0" mnemonicParsing="false" onMouseClicked="#open_add_student" prefHeight="32.0" prefWidth="168.0" text="Добавить студента" />
+                <Button id="open_add_teacher" layoutX="14.0" layoutY="127.0" mnemonicParsing="false" onMouseClicked="#open_add_teacher" prefHeight="32.0" prefWidth="168.0" text="Добавить преподавателя" />
+                <Button id="open_add_task" layoutX="14.0" layoutY="243.0" mnemonicParsing="false" onMouseClicked="#open_add_task" prefHeight="32.0" prefWidth="168.0" text="Добавить задание" />
+                <Button id="open_add_subject" layoutX="14.0" layoutY="185.0" mnemonicParsing="false" onMouseClicked="#open_add_subject" prefHeight="32.0" prefWidth="168.0" text="Добавить предмет" />
+                <Button id="open_add_group" layoutX="14.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#open_add_group" prefHeight="32.0" prefWidth="168.0" text="Добавить группу" />
+                <TableView fx:id="table_1" layoutX="198.0" layoutY="0.0" prefHeight="369.0" prefWidth="401.0">
+                  <columns>
+                    <TableColumn editable="false" maxWidth="5000.0" minWidth="10.0" prefWidth="151.0" sortable="false" text="ФИО" fx:id="fio" />
+                    <TableColumn editable="false" maxWidth="5000.0" minWidth="10.0" prefWidth="110.0" sortable="false" text="Должность" fx:id="column2" />
+                    <TableColumn editable="false" maxWidth="5000.0" minWidth="10.0" prefWidth="135.0" sortable="false" text="Номер телефона" fx:id="phone" />
+                  </columns>
+                </TableView>
+                <Button id="open_add_task" fx:id="add_schedule" layoutX="14.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#open_add_schedule" prefHeight="32.0" prefWidth="168.0" text="Добавить расписание" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Журнал">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TableView fx:id="journal" layoutX="0.0" layoutY="0.0" prefHeight="369.0" prefWidth="439.0">
+                  <columns>
+                    <TableColumn editable="false" maxWidth="5000.0" minWidth="10.0" prefWidth="109.0" sortable="false" text="ФИО" />
+                    <TableColumn editable="false" maxWidth="5000.0" minWidth="10.0" prefWidth="63.0" sortable="false" text="Группа" />
+                    <TableColumn editable="false" maxWidth="5000.0" minWidth="10.0" prefWidth="97.0" sortable="false" text="Предмет" />
+                    <TableColumn editable="false" prefWidth="75.0" sortable="false" text="Статус" />
+                    <TableColumn editable="false" prefWidth="75.0" sortable="false" text="Оценка" />
+                  </columns>
+                </TableView>
+                <RadioButton fx:id="only_passed" layoutX="444.0" layoutY="56.0" mnemonicParsing="false" prefWidth="142.0" text="Только сдавшие">
+                  <toggleGroup>
+                    <ToggleGroup fx:id="only" />
+                  </toggleGroup>
+                </RadioButton>
+                <RadioButton id="only_passed" fx:id="only_not_started" layoutX="444.0" layoutY="91.0" mnemonicParsing="false" prefWidth="142.0" text="Только не начавшие" toggleGroup="$only" />
+                <RadioButton id="only_passed" fx:id="all" layoutX="444.0" layoutY="126.0" mnemonicParsing="false" prefWidth="142.0" selected="true" text="Все" toggleGroup="$only" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Статистика">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TableView fx:id="stat_table" layoutX="0.0" layoutY="0.0" prefHeight="369.0" prefWidth="406.0">
+                  <columns>
+                    <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="112.0" text="Номер группы" />
+                    <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="180.0" text="Направление" />
+                    <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="108.0" text="Средний балл" />
+                  </columns>
+                </TableView>
+                <RadioButton fx:id="mark_filter" layoutX="416.0" layoutY="25.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="170.0" text="Фильтр среднего балла" />
+                <Label layoutX="410.0" layoutY="57.0" text="от" />
+                <TextField fx:id="min_mark" layoutX="429.0" layoutY="54.0" prefWidth="62.0" text="2" />
+                <Label layoutX="501.0" layoutY="57.0" text="до" />
+                <TextField fx:id="max_mark" layoutX="524.0" layoutY="54.0" prefWidth="62.0" text="5" />
+                <Label layoutX="422.0" layoutY="103.0" prefHeight="29.0" prefWidth="143.0" text="Сортировка по">
+                  <font>
+                    <Font size="14.0" />
+                  </font>
+                </Label>
+                <RadioButton fx:id="sort_spec" layoutX="422.0" layoutY="144.0" mnemonicParsing="false" selected="true" text="Направлениям">
+                  <toggleGroup>
+                    <ToggleGroup fx:id="sort" />
+                  </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="sort_mark_high" layoutX="422.0" layoutY="177.0" mnemonicParsing="false" text="Баллу" toggleGroup="$sort" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Кафедра">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TableView fx:id="phone_book" layoutX="0.0" layoutY="0.0" prefHeight="370.0" prefWidth="477.0">
+                  <columns>
+                    <TableColumn editable="false" maxWidth="5000.0" minWidth="10.0" prefWidth="121.0" sortable="false" text="ФИО" />
+                    <TableColumn editable="false" maxWidth="5000.0" minWidth="10.0" prefWidth="132.0" sortable="false" text="Номер телефона" />
+                    <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="97.0" text="" />
+                  </columns>
+                </TableView>
+                <RadioButton fx:id="teachers_radio" layoutX="484.0" layoutY="52.0" mnemonicParsing="false" selected="true" text="Преподаватели" />
+                <RadioButton fx:id="students_radio" layoutX="484.0" layoutY="89.0" mnemonicParsing="false" selected="true" text="Студенты" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>

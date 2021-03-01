@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="330.9998779296875" prefWidth="317.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controllers.adds.addTeacher">
+  <children>
+    <Label layoutX="47.0" layoutY="14.0" text="Добавление преподавателя">
+      <font>
+        <Font name="System Bold" size="15.0" />
+      </font>
+    </Label>
+    <TextField fx:id="fio_input" layoutX="51.0" layoutY="42.0" prefHeight="30.0" prefWidth="200.0" promptText="ФИО" />
+    <TextField fx:id="phone_input" layoutX="50.0" layoutY="82.0" prefHeight="30.0" prefWidth="200.0" promptText="Телефон" />
+    <TextField fx:id="position_input" layoutX="51.0" layoutY="125.0" prefHeight="30.0" prefWidth="200.0" promptText="Должность" />
+    <Button layoutX="254.0" layoutY="302.0" mnemonicParsing="false" onMouseClicked="#confirm" text="ОК" />
+    <TextField fx:id="login_input" layoutX="51.0" layoutY="167.0" prefHeight="30.0" prefWidth="200.0" promptText="Логин" />
+    <TextField fx:id="password_input" layoutX="50.0" layoutY="213.0" prefHeight="30.0" prefWidth="200.0" promptText="Пароль" />
+    <ChoiceBox fx:id="subjects" layoutX="63.0" layoutY="260.0" prefWidth="146.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Label layoutX="2.0" layoutY="263.0" text="Предмет" />
+    <Button layoutX="222.0" layoutY="261.0" mnemonicParsing="false" onMouseClicked="#add_subject" prefWidth="81.0" text="Добавить" />
+  </children>
+</AnchorPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="150.0" prefWidth="289.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controllers.adds.addGroup">
+  <children>
+    <Label layoutX="64.0" layoutY="14.0" prefHeight="31.0" prefWidth="161.0" text="Добавление группы">
+      <font>
+        <Font name="System Bold" size="15.0" />
+      </font>
+    </Label>
+    <TextField fx:id="group_number" layoutX="45.0" layoutY="53.0" prefWidth="200.0" promptText="Номер группы" />
+    <ChoiceBox fx:id="group_spec" layoutX="127.0" layoutY="87.0" prefWidth="118.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Label layoutX="45.0" layoutY="89.0" text="Направление" />
+    <Button fx:id="btn" layoutX="238.0" layoutY="120.0" mnemonicParsing="false" onMouseClicked="#confirm" text="ОК" />
+  </children>
+</AnchorPane>

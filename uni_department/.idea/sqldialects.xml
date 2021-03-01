@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/controllers/AnswerController.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/controllers/AskFormController.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/controllers/MainWindowAdminController.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/controllers/MainWindowStudentController.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/controllers/MainWindowTeacherController.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/controllers/adds/AddProgressController.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/controllers/adds/addGroup.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/Main.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/db/SQLDatabaseConnection.java" dialect="GenericSQL" />
+  </component>
+</project>

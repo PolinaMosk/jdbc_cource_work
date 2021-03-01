@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="117.0" prefWidth="280.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controllers.adds.addSubject">
+  <children>
+    <Label layoutX="57.0" layoutY="14.0" text="Добавление предмета">
+      <font>
+        <Font name="System Bold" size="15.0" />
+      </font>
+    </Label>
+    <TextField fx:id="name" layoutX="40.0" layoutY="45.0" prefWidth="200.0" promptText="Название" />
+    <Button layoutX="222.0" layoutY="83.0" mnemonicParsing="false" onMouseClicked="#confirm" text="ОК" />
+  </children>
+</AnchorPane>
